@@ -1,0 +1,4 @@
+SPEECH_TO_TEXT_APIKEY=clmic8kaytbRG6DZs0qfSSX7LvGN8FWSXnuPxzB8Q4L4
+SPEECH_TO_TEXT_IAM_APIKEY=clmic8kaytbRG6DZs0qfSSX7LvGN8FWSXnuPxzB8Q4L4
+SPEECH_TO_TEXT_URL=https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/853d3452-e485-4776-b99e-7392a265e07e
+SPEECH_TO_TEXT_AUTH_TYPE=iam
