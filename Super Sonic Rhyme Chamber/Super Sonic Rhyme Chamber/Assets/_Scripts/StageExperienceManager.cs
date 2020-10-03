@@ -10,6 +10,9 @@ public class StageExperienceManager : MonoBehaviour
     public WatsonStreaming speechToTextService;
 
 
+    public Transform microphone_transform;
+
+    private Vector3 startingPosition;
 
     public enum performanceState
     {
@@ -29,30 +32,53 @@ public class StageExperienceManager : MonoBehaviour
 
     public void Start()
     {
-       
+        startingPosition = this.gameObject.transform.position;
     }
 
     public void BeginRecording()
     {
 
-        currentPerformance = performanceState.Recording;
-
+        speechToTextService.StartRecording();
     }
 
 
     public void FinishRecording()
     {
-        currentPerformance = performanceState.FinishedRecording;
-        StartCoroutine(DelayedRecording());
+        speechToTextService.StopRecording();
+        ResetMicPosition();
 
+
+        StartCoroutine(DelayedEvaluate());
     }
 
-    IEnumerator DelayedRecording()
+    IEnumerator DelayedEvaluate()
     {
-        if (StageExperienceManager.instance.currentPerformance == StageExperienceManager.performanceState.Recording)
+       
             yield return new WaitForSeconds(.25f);
         speechToTextService.EvaluateSentence();
 
+
+    }
+
+    public void ChangeMicrophoneState(performanceState pPerformanceState)
+    {
+        currentPerformance = pPerformanceState;
+
+
+           
+    }
+
+    public void ResetMicPosition()
+    {
+        Debug.Log("Resetting !!!!");
+        microphone_transform.position = startingPosition;
+        microphone_transform.eulerAngles = Vector3.zero;
+    }
+
+    public void DelayedReset()
+    {
+
+        Invoke("ResetMicPosition",.75f);
 
     }
 }

@@ -19,17 +19,15 @@ public class MusicController : MonoBehaviour
 
     public void Start()
     {
-        if(randomizeStartingSong)
-        PlayRandomSong();
+        if (randomizeStartingSong)
+            PlayRandomSong();
     }
 
     public void PlayPreviousSong()
     {
-        if (musicAudioSource.clip != null)
-        {
-            musicAudioSource.Stop();
-            musicAudioSource = null;
-        }
+
+        musicAudioSource.Pause();
+       
 
         songIndex--;
         if (songIndex < 0)
@@ -37,19 +35,16 @@ public class MusicController : MonoBehaviour
 
         musicTitle.text = musicSamples[songIndex].songName;
         musicAudioSource.clip = musicSamples[songIndex].songAudio;
-        musicAudioSource.Play();
+        musicAudioSource.Play(1);
 
     }
 
     public void PlayNextSong()
     {
 
-        if (musicAudioSource.clip != null)
-        {
-            musicAudioSource.Stop();
-            musicAudioSource = null;
-        }
-       
+
+        musicAudioSource.Pause();
+
 
         songIndex++;
 
@@ -58,17 +53,28 @@ public class MusicController : MonoBehaviour
 
         musicTitle.text = musicSamples[songIndex].songName;
         musicAudioSource.clip = musicSamples[songIndex].songAudio;
-        musicAudioSource.Play();
+        musicAudioSource.Play(1);
 
     }
 
     public void PlayRandomSong()
     {
-        if (musicAudioSource.clip != null)
-        {
-            musicAudioSource.Stop();
-            musicAudioSource = null;
-        }
+
+        musicAudioSource.Pause();
+
+
+        songIndex = Random.Range(0, musicSamples.Count);
+
+        musicTitle.text = musicSamples[songIndex].songName;
+        musicAudioSource.clip = musicSamples[songIndex].songAudio;
+
+        musicAudioSource.Play(1);
+
+    }
+
+    public void PlayRandomSongSimple()
+    {
+       
 
         songIndex = Random.Range(0, musicSamples.Count);
 

@@ -1,11 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudienceController
+    - AudienceMemberMove
+    - ConsoleOutput
     - DisplayContainer
     - EnableSwitch
     - LipSyncDemo_Control
     - LipSyncDemo_SetCurrentTarget
     - Mic_Script
+    - MicrophoneObject
+    - MusicController
     - ONSPSettings
     - OVRLipSync
     - OVRLipSyncContext
@@ -19,11 +24,14 @@ ScriptsOnlyBuild:
     - OvrAvatarLocalDriver
     - OvrAvatarSettings
     - PunchlineParser
+    - StageExperienceManager
     - TimedDeactivate
     - WatsonStreaming
     CFXRRuntime.dll:
     - CartoonFX.CFXR_ParticleText
     - CartoonFX.CFXR_ParticleTextFontAsset
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
     IBM.Cloud.SDK.dll:
     - IBM.Cloud.SDK.Utilities.Runnable
     Oculus.VR.Editor.dll:
@@ -37,6 +45,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
+    - TMPro.TextMeshProUGUI
     Unity.XR.Interaction.Toolkit.dll:
     - UnityEngine.XR.Interaction.Toolkit.XRController
     - UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable
@@ -67,9 +76,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/_Scenes/ConcertTestScene_With_OVRMIC.unity:
@@ -116,87 +127,107 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11444}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11690}
+      Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 12360}
+      Script: {instanceID: 11760}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12708}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 12772}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 12940}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 12824}
     - Class: 114
-      Script: {instanceID: 13658}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13792}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 13804}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 13816}
+      Script: {instanceID: 13008}
     - Class: 114
-      Script: {instanceID: 14096}
+      Script: {instanceID: 13194}
     - Class: 114
-      Script: {instanceID: 14364}
+      Script: {instanceID: 13728}
     - Class: 114
-      Script: {instanceID: 14412}
+      Script: {instanceID: 13864}
     - Class: 114
-      Script: {instanceID: 14448}
+      Script: {instanceID: 13876}
     - Class: 114
-      Script: {instanceID: 14472}
+      Script: {instanceID: 13890}
     - Class: 114
-      Script: {instanceID: 14578}
+      Script: {instanceID: 14170}
     - Class: 114
-      Script: {instanceID: 14594}
+      Script: {instanceID: 14442}
     - Class: 114
-      Script: {instanceID: 14764}
+      Script: {instanceID: 14490}
     - Class: 114
-      Script: {instanceID: 14864}
+      Script: {instanceID: 14512}
     - Class: 114
-      Script: {instanceID: 15122}
+      Script: {instanceID: 14530}
     - Class: 114
-      Script: {instanceID: 15146}
+      Script: {instanceID: 14554}
     - Class: 114
-      Script: {instanceID: 15240}
+      Script: {instanceID: 14664}
     - Class: 114
-      Script: {instanceID: 15366}
+      Script: {instanceID: 14680}
     - Class: 114
-      Script: {instanceID: 15402}
+      Script: {instanceID: 14852}
     - Class: 114
-      Script: {instanceID: 15426}
+      Script: {instanceID: 14956}
     - Class: 114
-      Script: {instanceID: 15598}
+      Script: {instanceID: 15018}
     - Class: 114
-      Script: {instanceID: 15616}
+      Script: {instanceID: 15218}
     - Class: 114
-      Script: {instanceID: 15718}
+      Script: {instanceID: 15242}
     - Class: 114
-      Script: {instanceID: 15844}
+      Script: {instanceID: 15338}
     - Class: 114
-      Script: {instanceID: 15864}
+      Script: {instanceID: 15474}
     - Class: 114
-      Script: {instanceID: 15942}
+      Script: {instanceID: 15512}
     - Class: 114
-      Script: {instanceID: 16002}
+      Script: {instanceID: 15536}
+    - Class: 114
+      Script: {instanceID: 15548}
+    - Class: 114
+      Script: {instanceID: 15710}
+    - Class: 114
+      Script: {instanceID: 15728}
+    - Class: 114
+      Script: {instanceID: 15774}
+    - Class: 114
+      Script: {instanceID: 15832}
+    - Class: 114
+      Script: {instanceID: 15958}
+    - Class: 114
+      Script: {instanceID: 15978}
+    - Class: 114
+      Script: {instanceID: 16056}
+    - Class: 114
+      Script: {instanceID: 16118}
+    - Class: 114
+      Script: {instanceID: 221030}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -206,6 +237,8 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -372,6 +405,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 704dcd31abc789439bc3f3cd10b58c2b
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 179648033371456981a3c08cb9f47477
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -722,6 +767,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: ff390bde647fde1ba82929a670ce862e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StageExperienceManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Oculus.VR.dll
     namespaceName: 
@@ -840,6 +891,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: OVR
     className: AudioManager
+  - hash:
+      serializedVersion: 2
+      Hash: 465f3160638d7b14b0ead93ad93a732c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicController
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -1640,6 +1697,12 @@ ScriptsOnlyBuild:
     className: ExampleLanguageTranslatorV3
   - hash:
       serializedVersion: 2
+      Hash: 120eca27d6ee5754619be57191719209
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudienceController
+  - hash:
+      serializedVersion: 2
       Hash: 421b20ccd7815ebee5e2b14a986d2efc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1788,6 +1851,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: OVRMeshRenderer
+  - hash:
+      serializedVersion: 2
+      Hash: 56c97b31bc6a8ced770b5c5e920f5462
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LetterDictionary
   - hash:
       serializedVersion: 2
       Hash: b8d4b9b58cda7de3878cdf499471863b
@@ -2000,6 +2069,12 @@ ScriptsOnlyBuild:
     className: DisplayContainer
   - hash:
       serializedVersion: 2
+      Hash: fc26df21cea0a4e216742ba3b74942f2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MicrophoneObject
+  - hash:
+      serializedVersion: 2
       Hash: e70e7b311a1620c2e899545b2e1fdfae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2070,6 +2145,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LaserPointer
+  - hash:
+      serializedVersion: 2
+      Hash: 34c62335e6c3259cfa50a0f6d11ab25f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudienceMemberMove
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2256,7 +2337,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6e62434580878052e7de472309fdeaa9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ConsoleOutput
   platform: 13
   scenePathNames:
   - Assets/_Scenes/ConcertTestScene_With_OVRMIC.unity
-  playerPath: /Users/jonathanjennings/Documents/_builds/SuperSonicRhymeChamber_ConceptBuild.apk
+  playerPath: /Users/jonathanjennings/Documents/_builds/SuperSonicRhymeChamber_audienceTest.apk

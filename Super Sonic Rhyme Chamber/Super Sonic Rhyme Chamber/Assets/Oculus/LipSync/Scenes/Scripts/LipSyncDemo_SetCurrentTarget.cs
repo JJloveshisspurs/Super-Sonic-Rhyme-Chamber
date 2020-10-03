@@ -43,8 +43,8 @@ public class LipSyncDemo_SetCurrentTarget : MonoBehaviour
 
         // Initialize the proper target set
         targetSet = 0;
-        SwitchTargets[0].SetActive<OVRLipSyncContextMorphTarget>(0);
-        SwitchTargets[1].SetActive<OVRLipSyncContextMorphTarget>(0);
+       //SwitchTargets[0].SetActive<OVRLipSyncContextMorphTarget>(0);
+        //SwitchTargets[1].SetActive<OVRLipSyncContextMorphTarget>(0);
     }
 
     // Update is called once per frame
@@ -173,7 +173,9 @@ public class LipSyncDemo_SetCurrentTarget : MonoBehaviour
     /// <param name="touchEvent">Touch event.</param>
     void LocalTouchEventCallback(OVRTouchpad.TouchEvent touchEvent)
     {
-        switch(touchEvent)
+
+        Debug.Log("Touch event occured!");
+        /*switch(touchEvent)
         {
             case(OVRTouchpad.TouchEvent.Left):
 
@@ -194,6 +196,6 @@ public class LipSyncDemo_SetCurrentTarget : MonoBehaviour
             SetCurrentTarget();
 
             break;
-        }
+        }*/
     }
 }

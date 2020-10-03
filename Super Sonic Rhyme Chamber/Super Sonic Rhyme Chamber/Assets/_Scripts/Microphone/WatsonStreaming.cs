@@ -136,7 +136,7 @@ public class WatsonStreaming : MonoBehaviour
                 _service.SmartFormatting = true;
                 _service.SpeakerLabels = false;
                 _service.WordAlternativesThreshold = null;
-                _service.EndOfPhraseSilenceTime = null;
+                _service.EndOfPhraseSilenceTime = 2.0;
                 _service.StartListening(OnRecognize, OnRecognizeSpeaker);
             }
             else if (!value && _service.IsListening)
@@ -147,17 +147,24 @@ public class WatsonStreaming : MonoBehaviour
         }
     }
 
-    private void StartRecording()
+    public void StartRecording()
     {
+        //*** Clear last line upon new one
+        ClearResultstextMesh();
+
         if (_recordingRoutine == 0)
         {
+            StageExperienceManager.instance.ChangeMicrophoneState(StageExperienceManager.performanceState.Recording);
+
             UnityObjectUtil.StartDestroyQueue();
             _recordingRoutine = Runnable.Run(RecordingHandler());
         }
     }
 
-    private void StopRecording()
+    public void StopRecording()
     {
+        StageExperienceManager.instance.ChangeMicrophoneState(StageExperienceManager.performanceState.FinishedRecording);
+
         if (_recordingRoutine != 0)
         {
             Microphone.End(_microphoneID);
@@ -247,11 +254,16 @@ public class WatsonStreaming : MonoBehaviour
                         stopRecordEvent(text);
                         
                     }
+
+                    resultsTextMesh.text = text;
                     //**SSRC output text when recording finishes
                     if (StageExperienceManager.instance.currentPerformance == StageExperienceManager.performanceState.FinishedRecording && resultsTextMesh != null && textMeshText !=null)
                     {
-                        resultsTextMesh.text = text;
+
                         textMeshText = resultsTextMesh.text;
+
+                        //*** slight delay to make sure we pick up all audio resets microphone
+                        Invoke("ResetMicState", 1f);
                     }
                 }
 
@@ -287,5 +299,20 @@ public class WatsonStreaming : MonoBehaviour
                 Log.Debug("ExampleStreaming.OnRecognizeSpeaker()", string.Format("speaker result: {0} | confidence: {3} | from: {1} | to: {2}", labelResult.speaker, labelResult.from, labelResult.to, labelResult.confidence));
             }
         }
+    }
+
+    public void ResetMicState()
+    {
+
+        StageExperienceManager.instance.ChangeMicrophoneState(StageExperienceManager.performanceState.none);
+
+        EvaluateSentence();
+    }
+
+    public void ClearResultstextMesh()
+    {
+       
+        resultsTextMesh.text = "";
+
     }
 }
