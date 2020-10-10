@@ -23,6 +23,8 @@ public class WatsonStreaming : MonoBehaviour
     public Text ResultsField;
     public TextMeshPro resultsTextMesh;
 
+    public LineDeliveryandScorer lineDeliverySystem;
+
     //*** Gonna seperate this text string so that we cn clear it without getting rid of text;
     public string textMeshText;
     public float lineDeliveryTimer;
@@ -63,8 +65,16 @@ public class WatsonStreaming : MonoBehaviour
 
     public void EvaluateSentence()
     {
+        //*** Score player lines delivered
+        lineDeliverySystem.ScorePlayerLines(textMeshText);
 
+
+        //*** Check for key words
         PunchlineParser.instance.EvaluateLine(textMeshText);
+
+       
+
+
         textMeshText = "";
 
 
@@ -256,6 +266,10 @@ public class WatsonStreaming : MonoBehaviour
                     }
 
                     resultsTextMesh.text = text;
+
+                    ///**** We'll gradually render line as its spoken 
+                    lineDeliverySystem.playerLyrics.text = text;
+
                     //**SSRC output text when recording finishes
                     if (StageExperienceManager.instance.currentPerformance == StageExperienceManager.performanceState.FinishedRecording && resultsTextMesh != null && textMeshText !=null)
                     {

@@ -14,6 +14,8 @@ public class StageExperienceManager : MonoBehaviour
 
     private Vector3 startingPosition;
 
+    public bool Recording;
+
     public enum performanceState
     {
         none,
@@ -37,13 +39,16 @@ public class StageExperienceManager : MonoBehaviour
 
     public void BeginRecording()
     {
-
+        Recording = true;
         speechToTextService.StartRecording();
     }
 
 
     public void FinishRecording()
     {
+
+        Recording = false;
+
         speechToTextService.StopRecording();
         ResetMicPosition();
 

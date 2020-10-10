@@ -11,7 +11,21 @@ public class MicrophoneObject : MonoBehaviour
     private Vector3 startingPosition;
 
 
-  
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && StageExperienceManager.instance.Recording == false)
+        {
+            OnSelectEnter();
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space) && StageExperienceManager.instance.Recording == true)
+        {
+
+            OnSelectExit();
+
+        }
+    }
 
     public void ActivateMic()
     {
