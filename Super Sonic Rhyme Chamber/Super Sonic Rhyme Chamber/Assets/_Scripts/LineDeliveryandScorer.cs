@@ -26,6 +26,8 @@ public class LineDeliveryandScorer : MonoBehaviour
 
     public int score;
 
+    //*** trying to make sure we don't have duplicate things happening.
+    public bool evaluationLocked;
 
     //*** Charactr delimeters , ways we split the string
     char[] delimitedChars ={' '};
@@ -61,31 +63,35 @@ public class LineDeliveryandScorer : MonoBehaviour
     public void ScorePlayerLines(string pPlayerSpeech)
     {
         Debug.Log(" player line scoring == " + pPlayerSpeech);
-
-
-        //*** Breake down player Lines
-        playerWords = pPlayerSpeech.Split(delimitedChars);
-
-        //*** Iterate through all of the words in our current lyrics
-        for (int i = 0; i < activeWords.Length; i++)
+        if (evaluationLocked == false)
         {
-            for( int x = 0; x < playerWords.Length; x++)
+            evaluationLocked = true;
+
+
+            //*** Breake down player Lines
+            playerWords = pPlayerSpeech.Split(delimitedChars);
+
+            //*** Iterate through all of the words in our current lyrics
+            for (int i = 0; i < activeWords.Length; i++)
             {
-                //*** If word spoken matches word from original line
-                if(activeWords[i] == playerWords[x])
+                for (int x = 0; x < playerWords.Length; x++)
                 {
-                    PlayerScored();
+                    //*** If word spoken matches word from original line
+                    if (activeWords[i] == playerWords[x])
+                    {
+                        PlayerScored();
+
+                    }
+
+
 
                 }
 
 
-
             }
 
-
+            ShowFinalLineScore();
         }
-
-        ShowFinalLineScore();
     }
 
     public void MoveToNextLine()
@@ -114,6 +120,7 @@ public class LineDeliveryandScorer : MonoBehaviour
 
     public void ShowFinalLineScore()
     {
+        evaluationLocked = false;
         TotalLineScoreLabel.text = score.ToString();
         CancelInvoke();
         Invoke("MoveToNextLine", 3f);
