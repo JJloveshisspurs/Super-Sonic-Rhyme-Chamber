@@ -3,9 +3,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudienceController
     - AudienceMemberMove
+    - AudienceMemberSelector
     - ConsoleOutput
     - DisplayContainer
     - EnableSwitch
+    - LineDeliveryandScorer
     - LipSyncDemo_Control
     - LipSyncDemo_SetCurrentTarget
     - Mic_Script
@@ -108,6 +110,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -120,114 +124,122 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11444}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 11446}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11452}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11526}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11796}
     - Class: 114
-      Script: {instanceID: 12222}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12268}
     - Class: 114
-      Script: {instanceID: 12398}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12588}
+      Script: {instanceID: 12448}
     - Class: 114
-      Script: {instanceID: 12702}
+      Script: {instanceID: 12640}
     - Class: 114
-      Script: {instanceID: 12756}
+      Script: {instanceID: 12758}
     - Class: 114
-      Script: {instanceID: 12824}
+      Script: {instanceID: 12814}
     - Class: 114
-      Script: {instanceID: 12926}
+      Script: {instanceID: 12886}
     - Class: 114
-      Script: {instanceID: 12934}
+      Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 13002}
     - Class: 114
-      Script: {instanceID: 13008}
+      Script: {instanceID: 13010}
     - Class: 114
-      Script: {instanceID: 13194}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13086}
     - Class: 114
-      Script: {instanceID: 13864}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 13876}
+      Script: {instanceID: 13588}
     - Class: 114
-      Script: {instanceID: 13890}
+      Script: {instanceID: 13836}
     - Class: 114
-      Script: {instanceID: 14170}
+      Script: {instanceID: 13972}
     - Class: 114
-      Script: {instanceID: 14442}
+      Script: {instanceID: 13984}
     - Class: 114
-      Script: {instanceID: 14490}
+      Script: {instanceID: 13998}
     - Class: 114
-      Script: {instanceID: 14512}
+      Script: {instanceID: 14280}
     - Class: 114
-      Script: {instanceID: 14530}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 14554}
+      Script: {instanceID: 14608}
     - Class: 114
-      Script: {instanceID: 14664}
+      Script: {instanceID: 14630}
     - Class: 114
-      Script: {instanceID: 14680}
+      Script: {instanceID: 14648}
     - Class: 114
-      Script: {instanceID: 14852}
+      Script: {instanceID: 14672}
     - Class: 114
-      Script: {instanceID: 14956}
+      Script: {instanceID: 14788}
     - Class: 114
-      Script: {instanceID: 15018}
+      Script: {instanceID: 14804}
     - Class: 114
-      Script: {instanceID: 15218}
+      Script: {instanceID: 14980}
     - Class: 114
-      Script: {instanceID: 15242}
+      Script: {instanceID: 15086}
     - Class: 114
-      Script: {instanceID: 15338}
+      Script: {instanceID: 15148}
     - Class: 114
-      Script: {instanceID: 15474}
+      Script: {instanceID: 15354}
     - Class: 114
-      Script: {instanceID: 15512}
+      Script: {instanceID: 15378}
     - Class: 114
-      Script: {instanceID: 15536}
+      Script: {instanceID: 15480}
     - Class: 114
-      Script: {instanceID: 15548}
+      Script: {instanceID: 15616}
     - Class: 114
-      Script: {instanceID: 15710}
+      Script: {instanceID: 15654}
     - Class: 114
-      Script: {instanceID: 15728}
+      Script: {instanceID: 15678}
     - Class: 114
-      Script: {instanceID: 15774}
+      Script: {instanceID: 15690}
     - Class: 114
-      Script: {instanceID: 15832}
+      Script: {instanceID: 15854}
     - Class: 114
-      Script: {instanceID: 15958}
+      Script: {instanceID: 15872}
+    - Class: 114
+      Script: {instanceID: 15920}
     - Class: 114
       Script: {instanceID: 15978}
     - Class: 114
-      Script: {instanceID: 16056}
+      Script: {instanceID: 16110}
     - Class: 114
-      Script: {instanceID: 16118}
+      Script: {instanceID: 16130}
     - Class: 114
-      Script: {instanceID: 221030}
+      Script: {instanceID: 16208}
+    - Class: 114
+      Script: {instanceID: 16270}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -269,16 +281,16 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: d251bf88db6c95a6b1aa0b69298da9ef
-    assemblyName: UnityEngine.SpatialTracking.dll
-    namespaceName: UnityEngine.SpatialTracking
-    className: TrackedPoseDriver
-  - hash:
-      serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: d251bf88db6c95a6b1aa0b69298da9ef
+    assemblyName: UnityEngine.SpatialTracking.dll
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -501,6 +513,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 7893d54c00b9acd3549271c3bf558c5d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LineDeliveryandScorer
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -731,7 +749,7 @@ ScriptsOnlyBuild:
     className: OVRVignette
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ef5c43f921427d03730f6ea4c848f07d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
@@ -767,7 +785,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ff390bde647fde1ba82929a670ce862e
+      Hash: 823bbd7d0352fc74ed53189d903248cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StageExperienceManager
@@ -879,6 +897,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OvrAvatarSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 3149e68b62b82493254e1c995849f227
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudienceMemberSelector
   - hash:
       serializedVersion: 2
       Hash: b10f0f008d787b95a5928eed8ceaa36e
@@ -1161,6 +1185,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform
     className: CallbackRunner
+  - hash:
+      serializedVersion: 2
+      Hash: 6e62434580878052e7de472309fdeaa9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ConsoleOutput
   - hash:
       serializedVersion: 2
       Hash: b68d6fcfc0731d8945e5ef5ed7033e47
@@ -1907,6 +1937,12 @@ ScriptsOnlyBuild:
     className: GazeTargetSpawner
   - hash:
       serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: Unity.Analytics.DataPrivacy.dll
+    namespaceName: UnityEngine.Analytics
+    className: DataPrivacyButton
+  - hash:
+      serializedVersion: 2
       Hash: f8438efc679de058330bd3e038df1378
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2033,7 +2069,7 @@ ScriptsOnlyBuild:
     className: ONSPPropagationGeometry
   - hash:
       serializedVersion: 2
-      Hash: 8101470455455374ec525962afb7fddd
+      Hash: c0ac48acb1afb362a38be5e8d3c8ab68
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WatsonStreaming
@@ -2337,13 +2373,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 6e62434580878052e7de472309fdeaa9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ConsoleOutput
   platform: 13
   scenePathNames:
   - Assets/_Scenes/ConcertTestScene_With_OVRMIC.unity
-  playerPath: /Users/jonathanjennings/Documents/_builds/SuperSonicRhymeChamber_audienceTest.apk
+  playerPath: /Users/jonathanjennings/Documents/_builds/SuperSonicRhymeChamber_audienceTest2.apk
