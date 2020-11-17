@@ -10,6 +10,8 @@ public class SequenceModule_Base : MonoBehaviour
 
     public SequenceType.Sequence_Type sequence_Type;
 
+    public Color BGColor;
+
     // Start is called before the first frame update
     void Start()
     {

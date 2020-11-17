@@ -15,15 +15,24 @@ public class StoryIntroSequence : SequenceModule_Base
 
     public new void InitializeSequence()
     {
+        BeginIntroSeuenceMusic();
 
-
-
+      
     }
 
     public new void CloseSequence()
     {
 
+        Intro_Manager.instance.MoveToNextSequence();
+
+    }
 
 
+    public void BeginIntroSeuenceMusic()
+    {
+        audio.Play();
+
+        //*** end sequence based on audi clip length 
+        Invoke("CloseSequence", audio.clip.length);
     }
 }

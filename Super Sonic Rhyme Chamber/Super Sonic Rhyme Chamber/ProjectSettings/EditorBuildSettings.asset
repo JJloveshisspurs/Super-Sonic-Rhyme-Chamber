@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Oculus/LipSync/Scenes/LipSync_Demo.unity
     guid: 0a5206cd53b21be4588ef635952929e9
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/ConcertTestScene_With_OVRMIC.unity
     guid: 606724b95dc01402da27440816d9b119
+  - enabled: 1
+    path: Assets/_Scenes/Demo__FlowTestScene.unity
+    guid: 5ffffc27bdd224f1ca99cb4d075d88b7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 25149abff82294359a419dfc3154afd4,
       type: 2}

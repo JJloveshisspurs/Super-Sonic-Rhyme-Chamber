@@ -13,6 +13,8 @@ public class Intro_Manager : MonoBehaviour
 
     public float experienceDelayedStart;
 
+    public BackgroundSphereController backgroundController;
+
 
     public int currentSequenceIndex;
 
@@ -20,6 +22,10 @@ public class Intro_Manager : MonoBehaviour
     {
         if (instance == null) 
         instance = this;
+
+
+        //*** Reset oriiginal colors
+        backgroundController.ForceColorChanger(sequences[0].BGColor);
 
         Invoke("BeginIntroSequence", experienceDelayedStart);
     }
@@ -32,12 +38,16 @@ public class Intro_Manager : MonoBehaviour
 
         //*** Begin very first Sequence
         sequences[0].gameObject.SendMessage("InitializeSequence");
-
+       
     }
 
 
     public void MoveToNextSequence()
     {
+
+        if (sequences[currentSequenceIndex] != null)
+            sequences[currentSequenceIndex].gameObject.SetActive(false);
+
 
         Debug.Log("Moving to Next Sequence!!!!");
 
@@ -47,6 +57,16 @@ public class Intro_Manager : MonoBehaviour
         sequences[currentSequenceIndex].gameObject.SetActive(true);
 
         sequences[currentSequenceIndex].gameObject.SendMessage("InitializeSequence");
+
+        backgroundController.BackgroundColorChanger(sequences[currentSequenceIndex].BGColor);
+
+
+    }
+
+
+    public void ResetExperience()
+    {
+
 
 
     }
